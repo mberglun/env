@@ -1,0 +1,11 @@
+[user]
+	name = mberglun
+	email = mathias.berglund@iki.fi
+[credential]
+	helper = cache
+[core]
+    editor = vim
+[push]
+    default = simple
+[color]
+    ui = true

@@ -22,10 +22,10 @@ NeoBundle 'gregsexton/MatchTag'
 NeoBundle 'YankRing.vim'
 NeoBundle 'matchit.zip'
 NeoBundle 'ivanov/vim-ipython'
-NeoBundle 'hynek/vim-python-pep8-indent'
-NeoBundle 'nvie/vim-flake8'
-NeoBundle 'scrooloose/syntastic'
-"NeoBundle 'klen/python-mode'
+"NeoBundle 'hynek/vim-python-pep8-indent'
+"NeoBundle 'nvie/vim-flake8'
+"NeoBundle 'scrooloose/syntastic'
+NeoBundle 'klen/python-mode'
 NeoBundleCheck
 
 "" Generic
@@ -43,6 +43,9 @@ set backspace=indent,eol,start  " backspace through everything in insert mode
 nnoremap <S-Tab> <<_
 inoremap <S-Tab> <C-D>
 vnoremap <S-Tab> <gv
+let g:pymode_rope_goto_definition_bind = '<leader>g'
+nnoremap <C-h> :tabprevious<CR>
+nnoremap <C-l> :tabnext<CR>
 
 "" Searching
 set hlsearch                    " highlight matches
@@ -70,6 +73,8 @@ set lazyredraw
 
 " How many tenths of a second to blink when matching brackets
 set matchtime=2
+
+let g:pymode_folding = 0
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=DarkBlue
