@@ -47,6 +47,15 @@ let g:pymode_rope_goto_definition_bind = '<leader>g'
 nnoremap <C-h> :tabprevious<CR>
 nnoremap <C-l> :tabnext<CR>
 
+function! Tab_Or_Complete()
+  if col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^\w' || strpart( getline('.'), col('.')-2, 1 ) == "."
+    return "\<C-Y>"
+  else
+    return "\<Tab>"
+  endif
+endfunction
+inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
+
 "" Searching
 set hlsearch                    " highlight matches
 set incsearch                   " incremental searching
