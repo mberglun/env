@@ -84,7 +84,20 @@ set lazyredraw
 " How many tenths of a second to blink when matching brackets
 set matchtime=2
 
-let g:pymode_folding = 0
+" let g:pymode_folding = 0
+set foldmethod=indent
+set foldlevel=9         " No indentation by default
+
+nmap <leader>0 :set foldlevel=0<CR>
+nmap <leader>1 :set foldlevel=1<CR>
+nmap <leader>2 :set foldlevel=2<CR>
+nmap <leader>3 :set foldlevel=3<CR>
+nmap <leader>4 :set foldlevel=4<CR>
+nmap <leader>5 :set foldlevel=5<CR>
+nmap <leader>6 :set foldlevel=6<CR>
+nmap <leader>7 :set foldlevel=7<CR>
+nmap <leader>8 :set foldlevel=8<CR>
+nmap <leader>9 :set foldlevel=9<CR>
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=DarkBlue
